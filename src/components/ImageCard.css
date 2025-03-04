@@ -1,0 +1,182 @@
+:root {
+  /* Colores */
+  --color-white: white;
+  --color-text: #333;
+  --color-text-secondary: #767676;
+  --color-error: #e60023;
+  --color-error-hover: #d50c22;
+  --color-shadow: rgba(0, 0, 0, 0.1);
+  --color-overlay: rgba(0, 0, 0, 0.3);
+  --color-border: #f0f0f0;
+  --color-background-error: #f8f8f8;
+  
+  /* Espaciado */
+  --spacing-large: 20px;
+  --spacing-medium: 16px;
+  --spacing-standard: 12px;
+  --spacing-small: 2px;
+  
+  /* Bordes */
+  --border-radius-large: 24px;
+  --border-radius-medium: 16px;
+  --border-radius-circle: 50%;
+  
+  /* Tamaños */
+  --avatar-size: 75px;
+  --font-size-standard: 14px;
+  --font-size-small: 12px;
+  
+  /* Animaciones */
+  --transition-standard: 0.3s;
+  
+  /* Sombras */
+  --shadow-standard: 0 2px 10px rgba(0, 0, 0, 0.1);
+  --shadow-small: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos de las tarjetas de imágenes */
+.image-card {
+  position: relative;
+  border-radius: var(--border-radius-medium);
+  overflow: hidden;
+  box-shadow: var(--shadow-standard);
+  transition: transform var(--transition-standard);
+  background-color: var(--color-white);
+  margin-bottom: var(--spacing-medium);
+  width: 100%;
+}
+
+.image-card:hover {
+  transform: translateY(-5px);
+}
+
+.image-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--border-radius-medium) var(--border-radius-medium) 0 0;
+}
+
+.card-image {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.image-error {
+  width: 100%;
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-background-error);
+  color: var(--color-error);
+  font-weight: bold;
+  text-align: center;
+  padding: var(--spacing-large);
+}
+
+.visit-button-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-overlay);
+  opacity: 0;
+  transition: opacity var(--transition-standard);
+}
+
+.image-card:hover .visit-button-container {
+  opacity: 1;
+}
+
+
+.visit-button-container .visit-button {
+  background-color: #e60023;
+  color: white !important; 
+  border: none;
+  border-radius: var(--border-radius-large);
+  padding: var(--spacing-standard) var(--spacing-medium);
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.2s ease;
+  /* Anular cualquier estilo heredado */
+  font-family: inherit;
+  text-align: center;
+}
+
+.visit-button-container .visit-button:hover,
+.visit-button-container .visit-button:focus,
+.visit-button-container .visit-button:active {
+  background-color: #d50c22;
+  color: white !important;  
+  text-decoration: none;
+}
+
+/* Estilos para la información del usuario */
+.user-info-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--spacing-standard);
+  background-color: var(--color-white);
+  border-radius: 0 0 var(--border-radius-medium) var(--border-radius-medium);
+  text-align: center;
+}
+
+.user-avatar-container {
+  margin-top: -50px;
+  margin-bottom: var(--spacing-standard);
+  position: relative;
+}
+
+.user-avatar, .user-avatar-placeholder {
+  width: var(--avatar-size);
+  height: var(--avatar-size);
+  border-radius: var(--border-radius-circle);
+  object-fit: cover;
+  border-width: 4px;
+  border-style: solid;
+  box-shadow: var(--shadow-small);
+}
+
+.user-avatar-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-white);
+  font-weight: bold;
+  font-size: var(--font-size-standard);
+}
+
+.user-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.user-name {
+  font-weight: 600;
+  font-size: var(--font-size-standard);
+  color: var(--color-text);
+  margin-bottom: var(--spacing-small);
+}
+
+.upload-date {
+  font-size: var(--font-size-small);
+  color: var(--color-text-secondary);
+}
+
+.image-card-error {
+  padding: var(--spacing-large);
+  text-align: center;
+  background-color: var(--color-background-error);
+  border-radius: var(--border-radius-medium);
+  color: var(--color-error);
+  font-weight: bold;
+}

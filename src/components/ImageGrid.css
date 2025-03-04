@@ -1,0 +1,80 @@
+:root {
+  /* Colores */
+  --color-background-light: #f8f8f8;
+  --color-text: #666;
+  --color-text-dark: #555;
+  --color-error: #e60023;
+  
+  /* Espaciado */
+  --spacing-large: 40px;
+  --spacing-medium: 20px;
+  --spacing-grid: 16px;
+  
+  /* Bordes */
+  --border-radius: 16px;
+  
+  /* Tipografía */
+  --font-size-large: 18px;
+  --font-weight-medium: 500;
+  
+  /* Tamaños */
+  --max-card-width: 250px;
+}
+
+/* Contenedor principal del grid */
+.grid-container {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  padding: 0 var(--spacing-grid);
+}
+
+/* Estilos de Masonry Grid */
+.masonry-grid {
+  display: flex;
+  width: 100%;
+  margin-left: calc(-1 * var(--spacing-grid)); /* Compensar el espacio entre columnas */
+  justify-content: space-between;
+}
+
+.masonry-grid_column {
+  padding-left: var(--spacing-grid); /* Espacio entre columnas */
+  background-clip: padding-box;
+  width: var(--max-card-width);
+  flex-grow: 1;
+}
+
+/* Asegurar que las tarjetas no excedan el ancho máximo */
+.masonry-grid_column > * {
+  max-width: 100%;
+  width: 100%;
+}
+
+/* Estilo para el último elemento (para el observador de intersección) */
+.last-image-item {
+  min-height: 50px; /* Asegurar que siempre hay un espacio mínimo visible */
+  scroll-margin-bottom: 100px; /* Ayuda a que el elemento sea visible antes de llegar al final */
+  position: relative; /* Necesario para el posicionamiento correcto */
+}
+
+/* Estilos de mensajes */
+.loading, 
+.error, 
+.no-results {
+  text-align: center;
+  padding: var(--spacing-large);
+  font-size: var(--font-size-large);
+  color: var(--color-text);
+  background-color: var(--color-background-light);
+  border-radius: var(--border-radius);
+  margin: var(--spacing-medium) 0;
+}
+
+.error {
+  color: var(--color-error);
+}
+
+.no-results {
+  color: var(--color-text-dark);
+  font-weight: var(--font-weight-medium);
+}

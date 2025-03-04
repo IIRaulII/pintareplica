@@ -1,0 +1,95 @@
+:root {
+  /* Tipografía */
+  --font-family-system: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --line-height-base: 1.5;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-size-h1: 3.2em;
+  --line-height-h1: 1.1;
+  --font-size-button: 1em;
+  
+  /* Colores - Modo oscuro (default) */
+  --color-text: rgba(255, 255, 255, 0.87);
+  --color-background: #242424;
+  --color-link: #646cff;
+  --color-link-hover: #535bf2;
+  --color-button-bg: #1a1a1a;
+  --color-button-border-hover: #646cff;
+  
+  /* Espaciado */
+  --spacing-button-padding-v: 0.6em;
+  --spacing-button-padding-h: 1.2em;
+  
+  /* Bordes */
+  --border-radius-button: 8px;
+  --border-width: 1px;
+  --outline-focus: 4px auto -webkit-focus-ring-color;
+  
+  /* Animaciones */
+  --transition-button: border-color 0.25s;
+  
+  /* Renderizado */
+  font-family: var(--font-family-system);
+  line-height: var(--line-height-base);
+  font-weight: var(--font-weight-normal);
+
+  color-scheme: light dark;
+  color: var(--color-text);
+  background-color: var(--color-background);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Estilos globales para enlaces, excluyendo el botón visitar */
+a:not(.visit-button) {
+  font-weight: var(--font-weight-medium);
+  color: var(--color-link);
+  text-decoration: inherit;
+}
+a:not(.visit-button):hover {
+  color: var(--color-link-hover);
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: var(--font-size-h1);
+  line-height: var(--line-height-h1);
+}
+
+button {
+  border-radius: var(--border-radius-button);
+  border: var(--border-width) solid transparent;
+  padding: var(--spacing-button-padding-v) var(--spacing-button-padding-h);
+  font-size: var(--font-size-button);
+  font-weight: var(--font-weight-medium);
+  font-family: inherit;
+  background-color: var(--color-button-bg);
+  cursor: pointer;
+  transition: var(--transition-button);
+}
+button:hover {
+  border-color: var(--color-button-border-hover);
+}
+button:focus,
+button:focus-visible {
+  outline: var(--outline-focus);
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --color-text: #213547;
+    --color-background: #ffffff;
+    --color-link-hover: #747bff;
+    --color-button-bg: #f9f9f9;
+  }
+}
