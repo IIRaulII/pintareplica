@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import './ImageCard.css';
+import './ImageCard.scss';
 
 const ImageCard = ({ image }) => {
   const [showVisitButton, setShowVisitButton] = useState(false);

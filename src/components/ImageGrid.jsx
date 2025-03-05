@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import ImageCard from './ImageCard';
 import Masonry from 'react-masonry-css';
-import './ImageGrid.css';
+import './ImageGrid.scss';
 
 const ImageGrid = ({ images, loading, error, lastImageElementRef }) => {
   const [columns, setColumns] = useState(0);
@@ -69,7 +69,7 @@ const ImageGrid = ({ images, loading, error, lastImageElementRef }) => {
   for (const image of images) {
     // Verificar que la imagen tiene un ID y la estructura necesaria
     if (image && image.id && !seenIds.has(image.id)) {
-      // Verificar que la imagen tiene las propiedades necesarias
+      // Verificar que la imagen tenga las propiedades necesarias
       if (image.urls && image.user) {
         seenIds.add(image.id);
         uniqueImages.push(image);

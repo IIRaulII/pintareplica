@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
-import './App.css';
+import './App.scss';
 import Header from './components/Header';
 import ImageGrid from './components/ImageGrid';
 import { searchImages, getRandomImages, getCatImages, getMoreImages } from './services/unsplashService';

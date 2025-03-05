@@ -25,7 +25,7 @@ Este proyecto es una réplica de Pinterest desarrollada con Vite y React. Permit
    npm install
    ```
 3. Obtén una API key de Unsplash registrándote en [Unsplash Developers](https://unsplash.com/developers)
-4. Abre el archivo `src/services/unsplashService.js` y reemplaza `TU_API_KEY_AQUI` con tu API key de Unsplash
+4. Abre el archivo `.env` y reemplaza `TU_API_KEY_AQUI` con tu API key de Unsplash
 
 ## Ejecución
 

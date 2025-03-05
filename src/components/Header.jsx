@@ -3,7 +3,7 @@ import pinterestLogo from '../assets/pinterest-logo.png';
 import searchIcon from '../assets/search-icon.svg';
 import notificationIcon from '../assets/notification-icon.svg';
 import messageIcon from '../assets/message-icon.svg';
-import './Header.css';
+import './Header.scss';
 
 const Header = ({ onSearch, resetToInitial }) => {
   const [searchTerm, setSearchTerm] = useState('');

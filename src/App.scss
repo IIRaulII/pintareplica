@@ -52,11 +52,11 @@ body {
   margin-bottom: var(--spacing-standard);
   text-align: center;
   box-shadow: 0 2px 5px var(--color-shadow);
-}
-
-.search-failed-message p {
-  margin-top: var(--spacing-tiny);
-  font-size: 14px;
+  
+  p {
+    margin-top: var(--spacing-tiny);
+    font-size: 14px;
+  }
 }
 
 .loading-more {

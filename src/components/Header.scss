@@ -78,15 +78,15 @@
   transition: background-color 0.2s;
   white-space: nowrap;
   height: 35px;
-}
-
-.nav-button:hover {
-  background-color: var(--color-gray-light);
-}
-
-.nav-button.active {
-  background-color: var(--color-black);
-  color: var(--color-white);
+  
+  &:hover {
+    background-color: var(--color-gray-light);
+  }
+  
+  &.active {
+    background-color: var(--color-black);
+    color: var(--color-white);
+  }
 }
 
 /* Sección central con barra de búsqueda */
@@ -128,10 +128,10 @@
   outline: none;
   transition: background-color 0.3s;
   color: var(--color-black);
-}
-
-.search-input:focus {
-  background-color: var(--color-input-focus);
+  
+  &:focus {
+    background-color: var(--color-input-focus);
+  }
 }
 
 /* Sección derecha con iconos */
@@ -153,24 +153,24 @@
   cursor: pointer;
   border-radius: var(--border-radius-circle);
   transition: background-color 0.2s;
-}
-
-.icon-button:hover {
-  background-color: var(--color-gray-light);
+  
+  &:hover {
+    background-color: var(--color-gray-light);
+  }
+  
+  &.profile {
+    background-color: #777;
+    color: var(--color-white);
+    font-weight: bold;
+    width: 45px;
+    height: 45px;
+    font-size: 14px;
+  }
 }
 
 .nav-icon-img {
   width: 24px;
   height: 24px;
-}
-
-.icon-button.profile {
-  background-color: #777;
-  color: var(--color-white);
-  font-weight: bold;
-  width: 45px;
-  height: 45px;
-  font-size: 14px;
 }
 
 /* Media query para pantallas menores a 800px */

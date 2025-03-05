@@ -48,9 +48,10 @@ a:not(.visit-button) {
   font-weight: var(--font-weight-medium);
   color: var(--color-link);
   text-decoration: inherit;
-}
-a:not(.visit-button):hover {
-  color: var(--color-link-hover);
+  
+  &:hover {
+    color: var(--color-link-hover);
+  }
 }
 
 body {
@@ -76,13 +77,15 @@ button {
   background-color: var(--color-button-bg);
   cursor: pointer;
   transition: var(--transition-button);
-}
-button:hover {
-  border-color: var(--color-button-border-hover);
-}
-button:focus,
-button:focus-visible {
-  outline: var(--outline-focus);
+  
+  &:hover {
+    border-color: var(--color-button-border-hover);
+  }
+  
+  &:focus,
+  &:focus-visible {
+    outline: var(--outline-focus);
+  }
 }
 
 @media (prefers-color-scheme: light) {

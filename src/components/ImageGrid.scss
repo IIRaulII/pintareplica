@@ -35,19 +35,18 @@
   width: 100%;
   margin-left: calc(-1 * var(--spacing-grid)); /* Compensar el espacio entre columnas */
   justify-content: space-between;
-}
-
-.masonry-grid_column {
-  padding-left: var(--spacing-grid); /* Espacio entre columnas */
-  background-clip: padding-box;
-  width: var(--max-card-width);
-  flex-grow: 1;
-}
-
-/* Asegurar que las tarjetas no excedan el ancho máximo */
-.masonry-grid_column > * {
-  max-width: 100%;
-  width: 100%;
+  
+  &_column {
+    padding-left: var(--spacing-grid); /* Espacio entre columnas */
+    background-clip: padding-box;
+    width: var(--max-card-width);
+    flex-grow: 1;
+    
+    > * {
+      max-width: 100%;
+      width: 100%;
+    }
+  }
 }
 
 /* Estilo para el último elemento (para el observador de intersección) */
